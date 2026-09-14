@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRAPIFY — Make Memories Cute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">scrapify<span>.</span></div>
+            <div class="loader-line">
+                <span></span>
+            </div>
+            <p>cutting memories...</p>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            scrapify<span>.</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#home">home</a>
+            <a href="#shop">shop</a>
+            <a href="#collection">collection</a>
+            <a href="#about">about</a>
+            <a href="#faq">faq</a>
+        </nav>
+        <button class="cart-button" id="cartButton">
+            cart
+            <span id="cartCount">0</span>
+        </button>
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="sticker sticker-star">✦</div>
+            <div class="sticker sticker-heart">♡</div>
+            <div class="sticker sticker-flower">✿</div>
+            <div class="hero-tape tape-one"></div>
+            <div class="hero-tape tape-two"></div>
+            <div class="hero-content">
+                <p class="eyebrow reveal">
+                    ✂ digital scrapbook studio
+                </p>
+                <h1 class="reveal">
+                    make your
+                    <span>memories</span>
+                    cute.
+                </h1>
+                <p class="hero-description reveal">
+                    Cute digital scrapbook templates made
+                    for your favorite little moments.
+                </p>
+                <div class="hero-buttons reveal">
+                    <a href="#shop" class="primary-button">
+                        shop scrapbook
+                        <span>↗</span>
+                    </a>
+                    <a href="#about" class="secondary-button">
+                        our story
+                    </a>
+                </div>
+            </div>
+
+            <div class="scrapbook-stage reveal">
+                <div class="paper-shadow"></div>
+                <div class="photo-card photo-main">
+                    <div class="photo-image">
+                        <div class="fake-photo">
+                            <span>✿</span>
+                            <strong>little<br>moments</strong>
+                            <small>2026</small>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        memories worth keeping ♡
+                    </div>
+                </div>
+                <div class="photo-card photo-small">
+                    <div class="fake-photo small-photo">
+                        <span>☼</span>
+                        <strong>summer<br>days</strong>
+                    </div>
+                </div>
+                <div class="note-card">
+                    <span>dear diary,</span>
+                    <p>
+                        life is made
+                        of tiny moments.
+                    </p>
+                    <small>
+                        — scrapify
+                    </small>
+                </div>
+                <div class="tape tape-photo"></div>
+                <div class="paper-flower">✿</div>
+                <div class="paper-star">★</div>
+            </div>
+        </section>
+
+        <section class="marquee-section">
+            <div class="marquee">
+                <span>SCRAP YOUR MEMORIES</span>
+                <b>✦</b>
+                <span>MAKE IT CUTE</span>
+                <b>♡</b>
+                <span>KEEP THE MOMENTS</span>
+                <b>✦</b>
+                <span>SCRAP YOUR MEMORIES</span>
+                <b>♡</b>
+            </div>
+        </section>
+
+        <section class="intro section" id="about">
+            <div class="intro-left reveal">
+                <p class="section-label">
+                    01 — why scrapify?
+                </p>
+                <h2>
+                    your memories
+                    deserve a
+                    <i>pretty place.</i>
+                </h2>
+            </div>
+            <div class="intro-right reveal">
+                <p>
+                    Scrapify is a tiny digital scrapbook studio
+                    for people who love saving moments,
+                    decorating memories and making ordinary
+                    days feel a little more special.
+                </p>
+                <a href="#shop" class="text-link">
+                    explore our collection →
+                </a>
+            </div>
+        </section>
+
+        <section class="features section">
+            <div class="feature-card reveal">
+                <div class="feature-number">01</div>
+                <div class="feature-icon">✂</div>
+                <h3>done-for-you crafting</h3>
+                <p>Send your photos, and we’ll arrange them into an aesthetic story for you.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-number">02</div>
+                <div class="feature-icon">✦</div>
+                <h3>high resolution & ready to print</h3>
+                <p>Sharp, high-resolution results ready to print or share on social media.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-number">03</div>
+                <div class="feature-icon">♡</div>
+                <h3>personalized theme</h3>
+                <p>A unique design tailored to your special moment and personal style.</p>
+            </div>
+        </section>
+
+        <section class="shop section" id="shop">
+            <div class="shop-header reveal">
+                <div>
+                    <p class="section-label">02 — shop</p>
+                    <h2>choose your <i>scrapbook.</i></h2>
+                </div>
+                <p class="shop-description">
+                    Pick a package that fits your story.
+                    We’ll turn your photos into a cute digital scrapbook.
+                </p>
+            </div>
+            <div class="package-list reveal" id="products">
+                <article class="package-row" data-category="pages" data-name="Single Page" data-price="3000" data-description="1-page digital scrapbook design, made from your photos and preferred theme.">
+                    <div class="package-main"><span>01</span><div><h3>Single Page</h3><p>1-page digital scrapbook</p></div></div>
+                    <strong>Rp3.000</strong>
+                    <button class="add-cart">add to cart +</button>
+                </article>
+                <article class="package-row" data-category="pages" data-name="Photo Collage" data-price="5000" data-description="An aesthetic photo collage arranged into a cute digital layout.">
+                    <div class="package-main"><span>02</span><div><h3>Photo Collage</h3><p>aesthetic photo collage</p></div></div>
+                    <strong>Rp5.000</strong>
+                    <button class="add-cart">add to cart +</button>
+                </article>
+                <article class="package-row" data-category="packages" data-name="Mini Scrapbook" data-price="8000" data-description="A cute 3-page digital scrapbook package for your favorite memories.">
+                    <div class="package-main"><span>03</span><div><h3>Mini Scrapbook</h3><p>3-page package</p></div></div>
+                    <strong>Rp8.000</strong>
+                    <button class="add-cart">add to cart +</button>
+                </article>
+                <article class="package-row" data-category="packages" data-name="Medium Scrapbook" data-price="16000" data-description="A 7-page digital scrapbook package designed around your chosen photos and theme.">
+                    <div class="package-main"><span>04</span><div><h3>Medium Scrapbook</h3><p>7-page package</p></div></div>
+                    <strong>Rp16.000</strong>
+                    <button class="add-cart">add to cart +</button>
+                </article>
+                <article class="package-row" data-category="packages" data-name="Large Scrapbook" data-price="23000" data-description="A 10-page digital scrapbook package for bigger stories and more memories.">
+                    <div class="package-main"><span>05</span><div><h3>Large Scrapbook</h3><p>10-page package</p></div></div>
+                    <strong>Rp23.000</strong>
+                    <button class="add-cart">add to cart +</button>
+                </article>
+                <article class="package-row" data-category="packages" data-name="Premium Scrapbook" data-price="25000" data-description="Our best-value 15-page digital scrapbook package for a complete memory story.">
+                    <div class="package-main"><span>06</span><div><h3>Premium Scrapbook</h3><p>best value · 15 pages</p></div></div>
+                    <strong>Rp25.000</strong>
+                    <button class="add-cart">add to cart +</button>
+                </article>
+                <article class="package-row" data-category="custom" data-name="Special Event" data-price="0" data-display-price="By Request" data-description="A custom scrapbook theme made specially for birthdays, anniversaries, graduations, events, or any special moment.">
+                    <div class="package-main"><span>07</span><div><h3>Special Event</h3><p>custom theme / special event</p></div></div>
+                    <strong>By Request</strong>
+                    <button class="add-cart">add to cart +</button>
+                </article>
+            </div>
+        </section>
+
+<section class="collection section" id="collection">
+    <div class="collection-header reveal">
+        <div>
+            <p class="section-label">03 — collection</p>
+            <h2>our little <i>collection.</i></h2>
+        </div>
+        <p class="collection-description">
+            Little templates for little moments ♡
+        </p>
+    </div>
+    <div class="collection-grid">
+
+        <div class="collection-card reveal">
+            <div class="collection-paper collection-sweet">
+                <div class="paper-label">sweet memory</div>
+                <div class="single-photo photo-sweet">
+                    <img src="images/sweet-memory.png" alt="Sweet Memory">
+                </div>
+                <div class="collection-title">
+                    sweet<br>memory
+                </div>
+                <span class="deco deco-heart">♡</span>
+                <span class="deco deco-star">✦</span>
+            </div>
+        </div>
+
+        <div class="collection-card reveal">
+            <div class="collection-paper collection-friend">
+                <div class="paper-label">best moment</div>
+                <div class="single-photo photo-friend">
+                    <img src="images/best-moment.png" alt="Best Moment">
+                </div>
+                <div class="collection-title">
+                    best<br>moment
+                </div>
+                <span class="deco deco-heart">♡</span>
+                <span class="deco deco-flower">✿</span>
+            </div>
+        </div>
+
+        <div class="collection-card reveal">
+            <div class="collection-paper collection-little">
+                <div class="paper-label">little memory</div>
+                <div class="single-photo photo-little">
+                    <img src="images/little-memory.png" alt="Little Memory">
+                </div>
+                <div class="collection-title">
+                    little<br>memory
+                </div>
+                <span class="deco deco-star">✦</span>
+                <span class="deco deco-heart">♡</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="instagram section">
+            <div class="instagram-header reveal">
+                <div>
+                    <p class="section-label">
+                        04 — come say hi
+                    </p>
+                    <h2>
+                        found us on
+                        <i>instagram?</i>
+                    </h2>
+                </div>
+                <a href="https://www.instagram.com/scrapify.store/" target="_blank" class="instagram-link">
+                    @scrapify.store ↗
+                </a>
+            </div>
+            <div class="insta-grid">
+                <div class="insta-item reveal">
+                    <div>♡</div>
+                    <span>scrapbook<br>ideas</span>
+                </div>
+                <div class="insta-item reveal">
+                    <div>✿</div>
+                    <span>cute<br>details</span>
+                </div>
+                <div class="insta-item reveal">
+                    <div>✂</div>
+                    <span>memory<br>keeping</span>
+                </div>
+                <div class="insta-item reveal">
+                    <div>★</div>
+                    <span>digital<br>scraps</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section" id="faq">
+            <div class="faq-title reveal">
+                <p class="section-label">05 — questions</p>
+                <h2>things you <i>might ask.</i></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>How do I send my photos and design request?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>After placing your order, simply fill out a short form and upload your photos via Google Drive or WhatsApp. We’ll take care of arranging and designing everything for you!</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>How long does the process take and what file format will I receive?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The pre-order process takes 2–5 working days. You’ll receive the final result as high-resolution digital files (PDF/PNG), ready to print or upload.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="newsletter">
+            <div class="newsletter-paper">
+                <span class="newsletter-sticker">♡</span>
+                <p>ready to make a memory?</p>
+                <h2>order your <i>dream scrapbook</i> now.</h2>
+                <a href="#shop" class="primary-button">choose your package ↗</a>
+                <small>Send us your photos and let Scrapify turn them into something special.</small>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    scrapify<span>.</span>
+                </a>
+                <p>
+                    cute little things
+                    for your favorite memories.
+                </p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <span>explore</span>
+                    <a href="#shop">shop</a>
+                    <a href="#about">about</a>
+                    <a href="#faq">faq</a>
+                </div>
+                <div>
+                    <span>social</span>
+                    <a href="https://www.instagram.com/scrapify.store/" target="_blank">
+                        instagram
+                    </a>
+                    <a href="#">
+                        tiktok
+                    </a>
+                </div>
+                <div>
+                    <span>contact</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=meh@scrapify.my.id"
+                        target="_blank">
+                        email us
+                    </a>
+                    <a href="https://wa.me/628217856726" target="_blank">
+                        whatsapp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © 2026 scrapify studio
+            </span>
+            <span>
+                made with ♡ & too much coffee
+            </span>
+        </div>
+    </footer>
+
+    <div class="modal" id="productModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                ×
+            </button>
+            <div class="modal-image">
+                <div id="modalPreview">
+                    little moments
+                </div>
+            </div>
+            <div class="modal-info">
+                <p class="section-label">
+                    digital scrapbook
+                </p>
+                <h2 id="modalName">
+                    Little Moments
+                </h2>
+                <p id="modalDescription">
+                    A cute digital scrapbook template.
+                </p>
+                <strong id="modalPrice">
+                    Rp35K
+                </strong>
+                <button id="modalAddCart" class="primary-button">
+                    add to cart ↗
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>
+                your cart ♡
+            </h2>
+            <button id="closeCart">
+                ×
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <span>✿</span>
+                <p>
+                    your scrapbook basket
+                    is empty.
+                </p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>total</span>
+                <strong id="cartTotal">
+                    Rp0
+                </strong>
+            </div>
+            <button class="checkout-button" id="checkoutButton">
+                checkout ↗
+            </button>
+            <small>
+                we’ll collect your order details before WhatsApp.
+            </small>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-overlay" id="checkoutOverlay"></div>
+        <div class="checkout-content">
+            <button class="checkout-close" id="checkoutClose" aria-label="Close checkout">
+                ×
+            </button>
+            <div class="checkout-heading">
+                <p class="section-label">order details</p>
+                <h2>let’s make it yours ♡</h2>
+                <p>Fill in the details below, then we’ll continue your order through WhatsApp.</p>
+            </div>
+            <form id="checkoutForm" class="checkout-form">
+                <div class="checkout-grid">
+                    <label>
+                        <span>name</span>
+                        <input type="text" id="customerName" name="name" placeholder="your name" required>
+                    </label>
+                    <label>
+                        <span>WhatsApp number</span>
+                        <input type="tel" id="customerWhatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" required>
+                    </label>
+                </div>
+                <label>
+                    <span>your scrapbook theme</span>
+                    <input type="text" id="customerTheme" name="theme" placeholder="birthday, couple, memories, graduation..." required>
+                </label>
+                <label>
+                    <span>special notes</span>
+                    <textarea id="customerNotes" name="notes" rows="4" placeholder="Tell us anything you want us to know..."></textarea>
+                </label>
+                <fieldset>
+                    <legend>how will you send your photos?</legend>
+                    <div class="photo-methods">
+                        <label class="radio-option">
+                            <input type="radio" name="photoMethod" value="Google Drive" required>
+                            <span>Google Drive</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="photoMethod" value="WhatsApp">
+                            <span>WhatsApp</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="checkout-summary" id="checkoutSummary"></div>
+                <button type="submit" class="primary-button checkout-submit">
+                    continue to WhatsApp ↗
+                </button>
+                <p class="checkout-note">
+                    After sending the message, we’ll guide you through photo submission and payment.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
