@@ -2796,3 +2796,21 @@ body {
         margin-bottom: -125px;
     }
 }
+/* FIX SCRAPBOOK MOBILE + REVEAL */
+@media (max-width: 650px) {
+
+    .scrapbook-stage.reveal.visible {
+        transform: rotate(2deg) scale(.68);
+        transform-origin: top center;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .scrapbook-stage.reveal.visible {
+        transform: rotate(2deg) scale(.60);
+        transform-origin: top center;
+    }
+
+}
