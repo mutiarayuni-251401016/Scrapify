@@ -2625,3 +2625,122 @@ footer {
         font-size: .63rem;
     }
 }
+
+/* =========================================
+   MOBILE FIX — PREVENT HORIZONTAL OVERFLOW
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   HERO MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .scrapbook-stage {
+        width: 100%;
+        max-width: 430px;
+        height: 430px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        transform: scale(.68);
+        transform-origin: top center;
+
+        margin-bottom: -110px;
+    }
+
+    /* Batasi semua elemen scrapbook */
+    .scrapbook-stage > * {
+        max-width: none;
+    }
+
+    .photo-main {
+        left: 35px;
+    }
+
+    .photo-small {
+        right: -5px;
+    }
+
+    .note-card {
+        right: 5px;
+    }
+}
+
+
+/* =========================================
+   MARQUEE / RUNNING TEXT
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .marquee,
+    .marquee-track {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .marquee-track {
+        width: max-content;
+    }
+}
+
+
+/* =========================================
+   EXTRA SMALL PHONE
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .scrapbook-stage {
+        max-width: 380px;
+        height: 390px;
+
+        transform: scale(.60);
+        margin-bottom: -125px;
+    }
+
+    .photo-main {
+        left: 25px;
+    }
+
+    .photo-small {
+        right: 0;
+    }
+
+    .note-card {
+        right: 0;
+    }
+}
