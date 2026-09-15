@@ -4,7 +4,7 @@
     --paper: #fbf7ef;
     --brown: #4a3025;
     --dark: #291b16;
-    --coffee: #7655412;
+    --coffee: #765542;
     --light-brown: #b99a7c;
     --pink: #d9aaa1;
     --yellow: #e8cf8e;
@@ -715,237 +715,6 @@ body::before {
     color: var(--cream);
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 60px 25px;
-}
-
-.product-card {
-    grid-column: span 3;
-    transition: var(--transition);
-}
-
-.product-card:nth-child(5) {
-    grid-column: 2 / span 3;
-}
-
-.product-card:nth-child(6) {
-    grid-column: 6 / span 3;
-}
-
-.product-card:nth-child(7) {
-    grid-column: 10 / span 3;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-}
-
-.product-image {
-    height: 480px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    transition: var(--transition);
-}
-
-.image-one {
-    background: #c9ad91;
-}
-
-.image-two {
-    background: #b9b19d;
-}
-
-.image-three {
-    background: #c8a5a1;
-}
-
-.image-four {
-    background: #d0b88f;
-}
-
-.product-card:hover .product-image {
-    transform: rotate(-1deg);
-}
-
-.product-tag {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 7px 12px;
-    background: var(--cream);
-    font-family: var(--hand);
-    font-size: 1rem;
-    transform: rotate(-3deg);
-    z-index: 5;
-}
-.product-preview {
-    width: 65%;
-    aspect-ratio: 4 / 5;
-    background: #f8f0df;
-    box-shadow: 10px 15px 30px rgba(50,30,20,.18);
-    transform: rotate(-5deg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--brown);
-    position: relative;
-    transition: var(--transition);
-}
-
-.product-card:hover .product-preview {
-    transform: rotate(0) scale(1.03);
-}
-
-.product-preview::before {
-    content: "✦";
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    font-size: 1.5rem;
-    color: var(--yellow);
-}
-
-.product-preview::after {
-    content: "♡";
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
-    font-size: 1.5rem;
-    color: var(--pink);
-}
-
-.product-preview span {
-    font-family: var(--hand);
-    font-size: 1.8rem;
-}
-
-.product-preview strong {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 2.6rem;
-    line-height: .9;
-    margin: 8px 0;
-}
-
-.product-preview small {
-    font-family: var(--hand);
-    font-size: 1rem;
-}
-
-.travel-preview {
-    transform: rotate(5deg);
-    background: #e8dfcb;
-}
-
-.travel-preview strong {
-    font-family: var(--hand);
-    font-size: 3.2rem;
-}
-
-.travel-preview small {
-    font-family: var(--sans);
-    letter-spacing: .2em;
-}
-
-.travel-preview span {
-    font-size: 1rem;
-    margin-top: 15px;
-}
-
-.friends-preview {
-    background: #ead0ca;
-    transform: rotate(-4deg);
-}
-
-.friends-preview strong {
-    font-size: 2.3rem;
-}
-
-.friends-preview small {
-    margin-top: 15px;
-}
-
-.dump-preview {
-    background: #ede4d1;
-    transform: rotate(4deg);
-}
-
-.dump-preview strong {
-    font-family: var(--hand);
-    font-size: 4rem;
-}
-
-.quick-view {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    border: 0;
-    background: var(--brown);
-    color: var(--cream);
-    padding: 11px 15px;
-    border-radius: 50px;
-    font-size: .65rem;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.product-card:hover .quick-view {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.product-info {
-    padding: 20px 0 15px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.product-info h3 {
-    font-family: var(--serif);
-    font-size: 1.35rem;
-    font-weight: 500;
-}
-
-.product-info p {
-    font-family: var(--hand);
-    font-size: 1.1rem;
-    opacity: .65;
-    margin-top: 2px;
-}
-
-.product-info > strong {
-    font-size: .9rem;
-    white-space: nowrap;
-}
-
-.add-cart {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--brown);
-    text-transform: uppercase;
-    font-size: .65rem;
-    letter-spacing: .1em;
-    transition: var(--transition);
-}
-
-.add-cart:hover {
-    background: var(--brown);
-    color: var(--cream);
-}
 
 .quote-section {
     min-height: 70vh;
@@ -1109,91 +878,6 @@ body::before {
     opacity: .65;
 }
 
-.newsletter {
-    padding: 120px 7vw;
-    display: flex;
-    justify-content: center;
-    background: var(--cream);
-}
-
-.newsletter-paper {
-    width: min(700px, 100%);
-    padding: 80px 60px;
-    background: #e9d9bd;
-    text-align: center;
-    position: relative;
-    transform: rotate(-1deg);
-    box-shadow: 10px 15px 30px rgba(50,30,20,.08);
-}
-
-.newsletter-sticker {
-    position: absolute;
-    top: -25px;
-    right: 40px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--pink);
-    color: white;
-    font-size: 2rem;
-    transform: rotate(10deg);
-}
-
-.newsletter-paper > p {
-    font-family: var(--hand);
-    font-size: 1.4rem;
-}
-
-.newsletter-paper h2 {
-    font-family: var(--serif);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 500;
-    line-height: 1;
-    margin: 15px 0 30px;
-}
-
-.newsletter-paper h2 i {
-    font-family: var(--hand);
-}
-
-.newsletter-paper form {
-    display: flex;
-    max-width: 450px;
-    margin: auto;
-    border-bottom: 1px solid var(--brown);
-}
-
-.newsletter-paper input {
-    flex: 1;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 14px 0;
-    color: var(--brown);
-}
-
-.newsletter-paper input::placeholder {
-    color: var(--brown);
-    opacity: .5;
-}
-
-.newsletter-paper button {
-    border: 0;
-    background: transparent;
-    color: var(--brown);
-    text-transform: uppercase;
-    font-size: .7rem;
-    letter-spacing: .1em;
-}
-
-.newsletter-paper small {
-    display: block;
-    margin-top: 20px;
-    opacity: .5;
-}
 
 footer {
     background: #302019;
@@ -1491,213 +1175,6 @@ footer {
     font-size: .6rem;
 }
 
-.cart-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(30,20,15,.5);
-    z-index: 3500;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-}
-
-.cart-overlay.open {
-    opacity: 1;
-    visibility: visible;
-}
-
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition:
-        opacity .8s ease,
-        transform .8s cubic-bezier(.2,.8,.2,1);
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media (max-width: 900px) {
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 130px;
-    }
-    .hero-content {
-        text-align: center;
-    }
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .hero-buttons {
-        justify-content: center;
-    }
-    .scrapbook-stage {
-        height: 550px;
-        max-width: 600px;
-        width: 100%;
-        margin: auto;
-    }
-    .intro,
-    .faq {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-    .features {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .footer-top {
-        flex-direction: column;
-    }
-    .footer-links {
-        gap: 50px;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 650px) {
-    .navbar {
-        padding: 18px 5vw;
-    }
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 5vw;
-        right: 5vw;
-        background: var(--cream);
-        border: 1px solid var(--border);
-        padding: 20px;
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-        box-shadow: 5px 10px 30px rgba(40,25,15,.1);
-    }
-    .nav-links.open {
-        display: flex;
-    }
-    .menu-button {
-        display: block;
-    }
-    .cart-button {
-        margin-left: auto;
-        margin-right: 10px;
-    }
-    .hero {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-    .hero h1 {
-        font-size: 4rem;
-    }
-    .scrapbook-stage {
-        transform: scale(.78);
-        transform-origin: top center;
-        margin-bottom: -100px;
-    }
-    .photo-main {
-
-        left: 50px;
-    }
-    .photo-small {
-        right: -20px;
-    }
-    .note-card {
-        right: 0;
-    }
-    .section {
-        padding: 90px 5vw;
-    }
-    .shop-header,
-    .instagram-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-    }
-    .products {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-    .product-card,
-    .product-card:nth-child(5),
-    .product-card:nth-child(6),
-    .product-card:nth-child(7) {
-        grid-column: auto;
-    }
-    .product-image {
-        height: 400px;
-    }
-    .insta-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .newsletter {
-        padding: 80px 5vw;
-    }
-    .newsletter-paper {
-        padding: 60px 25px;
-    }
-    .newsletter-paper form {
-        flex-direction: column;
-        border: 0;
-        gap: 10px;
-    }
-    .newsletter-paper input {
-        border-bottom: 1px solid var(--brown);
-    }
-    .newsletter-paper button {
-        background: var(--brown);
-        color: var(--cream);
-        padding: 12px;
-        border-radius: 50px;
-    }
-    .footer-links {
-        gap: 35px;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .modal-content {
-        grid-template-columns: 1fr;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    .modal-image {
-        min-height: 300px;
-    }
-    .modal-info {
-        padding: 35px 25px;
-    }
-}
-
-.product-tag {
-    max-width: 85%;
-    line-height: 1.1;
-}
-
-.feature-card h3 {
-    line-height: 1.15;
-}
-
-.newsletter-paper .primary-button {
-    margin: 10px 0 8px;
-}
-
-.newsletter-paper > small {
-    display: block;
-    max-width: 430px;
-    margin: 8px auto 0;
-}
-
-.marquee {
-    width: 100%;
-    justify-content: center;
-    animation: none !important;
-    transform: none !important;
-}
-
 
 .checkout-modal {
     position: fixed;
@@ -1893,16 +1370,6 @@ footer {
     opacity: .5;
 }
 
-@media (max-width: 650px) {
-    .checkout-content {
-        padding: 36px 22px 28px;
-        width: 94%;
-    }
-
-    .checkout-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 .collection {
     position: relative;
@@ -2092,88 +1559,6 @@ footer {
     right: 8%;
 }
 
-.cursor-sparkle {
-    position: fixed;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    z-index: 9998;
-    font-family: var(--hand);
-    font-size: 10px;
-    color: var(--yellow);
-    transform:
-        translate(-50%, -50%)
-        scale(.55)
-        rotate(-8deg);
-    opacity: 0;
-    animation:
-        tinySparkle .7s ease-out forwards;
-}
-
-@keyframes tinySparkle {
-    0% {
-        opacity: 0;
-        transform:
-            translate(-50%, -50%)
-            scale(.45)
-            rotate(-8deg);
-    }
-    25% {
-        opacity: .85;
-    }
-    100% {
-        opacity: 0;
-        transform:
-            translate(-50%, -65%)
-            scale(1)
-            rotate(8deg);
-    }
-}
-
-@media (max-width: 900px) {
-    .collection-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    .collection-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px;
-    }
-    .collection-card:nth-child(3) {
-        grid-column: 1 / -1;
-        width: calc(50% - 12.5px);
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .collection {
-        padding-top: 90px;
-    }
-    .collection-header {
-        margin-bottom: 35px;
-    }
-    .collection-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-    .collection-card:nth-child(3) {
-        grid-column: auto;
-        width: 100%;
-    }
-    .collection-paper {
-        aspect-ratio: 4 / 5;
-        padding: 22px;
-    }
-    .collection-paper .single-photo {
-        width: 68%;
-        margin-top: 20px;
-    }
-    .collection-paper .collection-title {
-        font-size: 2.8rem;
-    }
-}
 
 .package-list {
     width: 100%;
@@ -2233,40 +1618,6 @@ footer {
     padding: 11px 15px;
     border-radius: 50px;
     white-space: nowrap;
-}
-
-@media (max-width: 900px) {
-    .package-row {
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 18px;
-    }
-    .package-row .add-cart {
-        grid-column: 1 / -1;
-        width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .package-row {
-        grid-template-columns: 1fr auto;
-        gap: 14px;
-    }
-    .package-main {
-        gap: 12px;
-    }
-    .package-main > span {
-        width: 22px;
-        flex-basis: 22px;
-    }
-    .package-main h3 {
-        font-size: 1.1rem;
-    }
-    .package-main p {
-        font-size: .9rem;
-    }
-    .package-row > strong {
-        min-width: auto;
-    }
 }
 
 .single-photo img {
@@ -2276,93 +1627,152 @@ footer {
     display: block;
 }
 
-/* =========================================================
-   SCRAPIFY — PACKAGE LIST
-   ========================================================= */
+/* =========================================
+   SCRAPIFY — CURRENT SITE EXTRAS
+   ========================================= */
 
-.package-list {
+.add-cart {
     width: 100%;
-    border-top: 1px solid var(--border);
+    padding: 13px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--brown);
+    text-transform: uppercase;
+    font-size: .65rem;
+    letter-spacing: .1em;
+    transition: var(--transition);
 }
 
-.package-row {
+.add-cart:hover {
+    background: var(--brown);
+    color: var(--cream);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Collection photos can contain real images later. */
+.single-photo img {
     width: 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: center;
-    gap: 28px;
-    padding: 22px 0;
-    border-bottom: 1px solid var(--border);
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.package-main {
-    min-width: 0;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.package-main > span {
-    width: 28px;
-    flex: 0 0 28px;
+/* Tiny cursor sparkle — normal cursor stays visible. */
+.cursor-sparkle {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 9998;
     font-family: var(--hand);
-    font-size: 1.15rem;
-    opacity: .45;
+    font-size: 10px;
+    color: var(--yellow);
+    transform: translate(-50%, -50%) scale(.55) rotate(-8deg);
+    opacity: 0;
+    animation: tinySparkle .7s ease-out forwards;
 }
 
-.package-main > div {
-    min-width: 0;
+@keyframes tinySparkle {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.45) rotate(-8deg);
+    }
+    25% {
+        opacity: .85;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -65%) scale(1) rotate(8deg);
+    }
 }
 
-.package-main h3 {
-    margin: 0;
-    font-family: var(--serif);
-    font-size: 1.35rem;
-    font-weight: 500;
-    line-height: 1.1;
+.feature-card h3 {
+    line-height: 1.15;
 }
 
-.package-main p {
-    margin-top: 3px;
-    font-family: var(--hand);
-    font-size: 1rem;
-    line-height: 1.2;
-    opacity: .62;
-}
+/* =========================================
+   SCRAPIFY — RESPONSIVE
+   Desktop styles above stay unchanged.
+   Mobile rules below are intentionally
+   consolidated so old rules cannot fight them.
+   ========================================= */
 
-.package-row > strong {
-    min-width: 88px;
-    text-align: right;
-    white-space: nowrap;
-    font-size: .9rem;
-}
+@media (max-width: 1100px) {
+    .hero {
+        gap: 30px;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
 
-.package-row .add-cart {
-    width: auto;
-    min-width: 120px;
-    padding: 11px 15px;
-    border-radius: 50px;
-    white-space: nowrap;
-}
+    .photo-main {
+        width: 360px;
+    }
 
-/* =========================================================
-   SCRAPIFY — MOBILE / RESPONSIVE CLEANUP
-   ========================================================= */
+    .paper-shadow {
+        width: 400px;
+        left: 50px;
+    }
+}
 
 @media (max-width: 900px) {
-    .package-row {
-        grid-template-columns: minmax(0, 1fr) auto auto;
-        gap: 18px;
-        padding: 20px 0;
+    .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding: 130px 6vw 55px;
+        gap: 35px;
+        align-items: start;
     }
 
-    .package-main {
-        gap: 15px;
+    .hero-content {
+        text-align: center;
     }
 
-    .package-row .add-cart {
-        width: auto;
-        min-width: 105px;
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .scrapbook-stage {
+        width: min(100%, 560px);
+        height: 560px;
+        margin: 0 auto;
+    }
+
+    .intro,
+    .faq {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 50px;
+        flex-wrap: wrap;
     }
 
     .collection-grid {
@@ -2382,17 +1792,31 @@ footer {
         padding: 16px 5vw;
     }
 
+    .logo {
+        font-size: 1.9rem;
+    }
+
     .nav-links {
+        position: absolute;
         top: 66px;
         left: 5vw;
         right: 5vw;
         width: auto;
-        max-width: none;
         padding: 18px;
+        background: var(--cream);
+        border: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
         gap: 17px;
+        box-shadow: 5px 10px 30px rgba(40,25,15,.1);
+    }
+
+    .nav-links.open {
+        display: flex;
     }
 
     .menu-button {
+        display: block;
         flex-shrink: 0;
     }
 
@@ -2402,57 +1826,262 @@ footer {
         margin-right: 8px;
     }
 
+    /* ---------- HERO ---------- */
+
     .hero {
+        min-height: 0;
         width: 100%;
-        padding-top: 110px;
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding: 105px 5vw 25px;
+        gap: 28px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 1.25rem;
+        margin-bottom: 14px;
     }
 
     .hero h1 {
         font-size: clamp(3rem, 14vw, 4rem);
-        line-height: .95;
+        line-height: .92;
+    }
+
+    .hero h1 span {
+        margin-left: 15px;
     }
 
     .hero-description {
         max-width: 330px;
+        margin-top: 22px;
+        font-size: .88rem;
+        line-height: 1.7;
     }
 
     .hero-buttons {
         width: 100%;
         gap: 10px;
+        margin-top: 25px;
+        flex-wrap: wrap;
     }
 
-    .hero-buttons a,
-    .hero-buttons button {
-        max-width: 100%;
+    .primary-button,
+    .secondary-button {
+        font-size: .67rem;
     }
+
+    .primary-button {
+        padding: 13px 18px;
+    }
+
+    .secondary-button {
+        padding: 13px 15px;
+    }
+
+    /*
+       IMPORTANT:
+       The scrapbook is resized by changing its actual children,
+       not by scaling the whole stage. This avoids the reveal/transform
+       conflict and keeps the composition centered on phones.
+    */
 
     .scrapbook-stage {
-        width: 100%;
-        max-width: 430px;
-        height: 430px;
-        transform: scale(.72);
-        transform-origin: top center;
-        margin: 0 auto -95px;
+        width: min(100%, 380px);
+        height: 455px;
+        margin: 0 auto;
+        transform: rotate(2deg);
+        transform-origin: center top;
     }
 
+    .scrapbook-stage.reveal {
+        transform: translateY(30px) rotate(2deg);
+    }
+
+    .scrapbook-stage.reveal.visible {
+        transform: rotate(2deg);
+    }
+
+    .paper-shadow {
+        width: 335px;
+        height: 405px;
+        top: 30px;
+        left: 24px;
+        transform: rotate(-7deg);
+    }
+
+    .photo-main {
+        width: 330px;
+        top: 25px;
+        left: 18px;
+    }
+
+    .photo-image {
+        height: 295px;
+        padding: 10px;
+    }
+
+    .fake-photo span {
+        font-size: 3rem;
+        margin-bottom: 6px;
+    }
+
+    .fake-photo strong {
+        font-size: 1.9rem;
+    }
+
+    .fake-photo small {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .photo-caption {
+        font-size: 1.1rem;
+        padding-top: 8px;
+    }
+
+    .photo-small {
+        width: 165px;
+        height: 185px;
+        right: 0;
+        top: 70px;
+    }
+
+    .photo-small .fake-photo {
+        padding: 8px;
+    }
+
+    .small-photo {
+        height: 150px;
+    }
+
+    .small-photo span {
+        font-size: 2.4rem;
+    }
+
+    .small-photo strong {
+        font-size: 1.25rem;
+    }
+
+    .note-card {
+        width: 190px;
+        padding: 20px;
+        right: 3px;
+        bottom: 40px;
+    }
+
+    .note-card span {
+        font-size: 1rem;
+    }
+
+    .note-card p {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .note-card small {
+        font-size: .9rem;
+    }
+
+    .tape {
+        width: 82px;
+        height: 25px;
+    }
+
+    .tape-photo {
+        top: 20px;
+        left: 170px;
+    }
+
+    .paper-flower {
+        left: 0;
+        bottom: 80px;
+        font-size: 3rem;
+    }
+
+    .paper-star {
+        right: 0;
+        bottom: 205px;
+        font-size: 2rem;
+    }
+
+    .sticker {
+        font-size: 2.2rem;
+    }
+
+    .sticker-heart {
+        font-size: 3rem;
+        bottom: 7%;
+    }
+
+    /* ---------- MARQUEE ---------- */
+
+    .marquee-section {
+        padding: 14px 0;
+        transform: rotate(-1deg) scale(1.01);
+    }
+
+    .marquee {
+        width: max-content;
+        justify-content: flex-start;
+        gap: 24px;
+        animation: marquee 22s linear infinite;
+        transform: none;
+    }
+
+    .marquee span {
+        font-size: 1.05rem;
+    }
+
+    .marquee b {
+        font-size: 1.45rem;
+    }
+
+    /* ---------- GENERAL SECTIONS ---------- */
+
     .section {
-        width: 100%;
-        padding: 75px 5vw;
+        padding: 85px 5vw;
     }
 
     .section-label {
-        font-size: .68rem;
+        font-size: 1.1rem;
+        margin-bottom: 14px;
     }
 
-    .section h2 {
-        font-size: clamp(2.2rem, 10vw, 3rem);
+    .intro,
+    .faq {
+        gap: 35px;
     }
+
+    .intro h2,
+    .shop h2,
+    .instagram h2,
+    .faq h2 {
+        font-size: clamp(2.4rem, 11vw, 3.5rem);
+    }
+
+    .intro-right p {
+        line-height: 1.75;
+    }
+
+    .features {
+        padding: 0 5vw 85px;
+        gap: 30px;
+    }
+
+    .feature-icon {
+        margin: 25px 0 8px;
+    }
+
+    /* ---------- SHOP / PACKAGES ---------- */
 
     .shop-header,
     .instagram-header,
     .collection-header {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 18px;
         margin-bottom: 32px;
     }
@@ -2461,13 +2090,12 @@ footer {
     .collection-description {
         width: 100%;
         max-width: 330px;
-        font-size: .86rem;
+        font-size: .84rem;
     }
 
-    /* Keep the package list compact on phones. */
     .package-row {
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: 10px 14px;
+        gap: 8px 12px;
         padding: 18px 0;
     }
 
@@ -2477,25 +2105,29 @@ footer {
     }
 
     .package-main > span {
-        width: 22px;
-        flex-basis: 22px;
-        font-size: 1rem;
+        width: 21px;
+        flex: 0 0 21px;
+        font-size: .95rem;
+    }
+
+    .package-main > div {
+        min-width: 0;
     }
 
     .package-main h3 {
-        font-size: 1.08rem;
+        font-size: 1.04rem;
         line-height: 1.05;
     }
 
     .package-main p {
-        font-size: .82rem;
-        line-height: 1.15;
+        font-size: .8rem;
+        line-height: 1.2;
         white-space: normal;
     }
 
     .package-row > strong {
         min-width: auto;
-        font-size: .78rem;
+        font-size: .76rem;
     }
 
     .package-row .add-cart {
@@ -2503,9 +2135,11 @@ footer {
         grid-row: 2;
         width: auto;
         min-width: 0;
-        padding: 8px 12px;
-        font-size: .68rem;
+        padding: 7px 11px;
+        font-size: .63rem;
     }
+
+    /* ---------- COLLECTION ---------- */
 
     .collection {
         padding-top: 75px;
@@ -2513,7 +2147,7 @@ footer {
 
     .collection-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 24px;
     }
 
     .collection-card,
@@ -2523,8 +2157,7 @@ footer {
     }
 
     .collection-paper {
-        width: 100%;
-        max-width: 390px;
+        width: min(100%, 370px);
         margin: 0 auto;
         aspect-ratio: 4 / 5;
         padding: 20px;
@@ -2537,12 +2170,97 @@ footer {
     }
 
     .collection-paper .collection-title {
-        font-size: clamp(2.4rem, 12vw, 3.1rem);
+        font-size: clamp(2.3rem, 12vw, 3rem);
     }
 
     .collection-paper .deco {
         width: 30px;
         height: 30px;
+    }
+
+    /* ---------- QUOTE / INSTAGRAM / FAQ ---------- */
+
+    .quote-section {
+        min-height: 55vh;
+        padding: 80px 5vw;
+    }
+
+    .quote-decoration {
+        font-size: 3rem;
+    }
+
+    .quote-small {
+        font-size: 1.25rem;
+    }
+
+    .quote-section h2 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .insta-item div {
+        font-size: 3rem;
+    }
+
+    .faq-question {
+        font-size: 1.05rem;
+        padding: 20px 0;
+    }
+
+    .faq-answer p {
+        padding-right: 15px;
+        font-size: .82rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 65px 5vw 25px;
+    }
+
+    .footer-top {
+        gap: 45px;
+        padding-bottom: 55px;
+    }
+
+    .footer-links {
+        width: 100%;
+        gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links > div {
+        min-width: 100px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* ---------- MODALS / CART ---------- */
+
+    .modal-content {
+        width: 94%;
+        grid-template-columns: 1fr;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-image {
+        min-height: 280px;
+    }
+
+    .modal-info {
+        padding: 35px 25px;
+    }
+
+    .cart-drawer {
+        width: min(430px, 94%);
     }
 
     .checkout-modal {
@@ -2572,15 +2290,6 @@ footer {
         padding: 9px 11px;
         font-size: .8rem;
     }
-
-    .footer-links {
-        width: 100%;
-        gap: 28px;
-    }
-
-    .footer-links > div {
-        min-width: 100px;
-    }
 }
 
 @media (max-width: 380px) {
@@ -2589,8 +2298,12 @@ footer {
         padding-right: 4vw;
     }
 
-    .section,
     .hero {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .section {
         padding-left: 4vw;
         padding-right: 4vw;
     }
@@ -2599,218 +2312,73 @@ footer {
         font-size: 2.85rem;
     }
 
+    .scrapbook-stage {
+        width: min(100%, 350px);
+        height: 425px;
+    }
+
+    .paper-shadow {
+        width: 305px;
+        height: 375px;
+        left: 20px;
+    }
+
+    .photo-main {
+        width: 300px;
+        left: 14px;
+    }
+
+    .photo-image {
+        height: 270px;
+    }
+
+    .photo-small {
+        width: 145px;
+        height: 165px;
+    }
+
+    .small-photo {
+        height: 135px;
+    }
+
+    .note-card {
+        width: 175px;
+        padding: 17px;
+        right: 0;
+        bottom: 35px;
+    }
+
+    .note-card p {
+        font-size: 1.35rem;
+    }
+
+    .tape-photo {
+        left: 150px;
+    }
+
     .package-row {
-        gap: 8px 10px;
+        gap: 7px 9px;
     }
 
     .package-main > span {
-        width: 19px;
-        flex-basis: 19px;
+        width: 18px;
+        flex-basis: 18px;
     }
 
     .package-main h3 {
-        font-size: 1rem;
+        font-size: .98rem;
     }
 
     .package-main p {
-        font-size: .76rem;
+        font-size: .74rem;
     }
 
     .package-row > strong {
-        font-size: .72rem;
+        font-size: .7rem;
     }
 
     .package-row .add-cart {
-        padding: 7px 10px;
-        font-size: .63rem;
+        padding: 6px 9px;
+        font-size: .59rem;
     }
-}
-
-/* =========================================
-   MOBILE FIX — PREVENT HORIZONTAL OVERFLOW
-   ========================================= */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    position: relative;
-}
-
-img,
-svg,
-video {
-    max-width: 100%;
-}
-
-
-/* =========================================
-   HERO MOBILE
-   ========================================= */
-
-@media (max-width: 650px) {
-
-    .hero {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .scrapbook-stage {
-        width: 100%;
-        max-width: 430px;
-        height: 430px;
-
-        margin-left: auto;
-        margin-right: auto;
-
-        transform: scale(.68);
-        transform-origin: top center;
-
-        margin-bottom: -110px;
-    }
-
-    /* Batasi semua elemen scrapbook */
-    .scrapbook-stage > * {
-        max-width: none;
-    }
-
-    .photo-main {
-        left: 35px;
-    }
-
-    .photo-small {
-        right: -5px;
-    }
-
-    .note-card {
-        right: 5px;
-    }
-}
-
-
-/* =========================================
-   MARQUEE / RUNNING TEXT
-   ========================================= */
-
-@media (max-width: 650px) {
-
-    .marquee,
-    .marquee-track {
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .marquee-track {
-        width: max-content;
-    }
-}
-
-
-/* =========================================
-   EXTRA SMALL PHONE
-   ========================================= */
-
-@media (max-width: 380px) {
-
-    .scrapbook-stage {
-        max-width: 380px;
-        height: 390px;
-
-        transform: scale(.60);
-        margin-bottom: -125px;
-    }
-
-    .photo-main {
-        left: 25px;
-    }
-
-    .photo-small {
-        right: 0;
-    }
-
-    .note-card {
-        right: 0;
-    }
-}
-/* =========================================
-   MOBILE OVERFLOW FIX
-   ========================================= */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-@media (max-width: 650px) {
-
-    .hero {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .scrapbook-stage {
-        width: 100%;
-        max-width: 430px;
-        height: 430px;
-        margin-left: auto;
-        margin-right: auto;
-
-        transform: scale(.68);
-        transform-origin: top center;
-
-        margin-bottom: -110px;
-    }
-
-    .marquee,
-    .marquee-track {
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .marquee-track {
-        width: max-content;
-    }
-}
-
-@media (max-width: 380px) {
-
-    .scrapbook-stage {
-        max-width: 380px;
-        height: 390px;
-        transform: scale(.60);
-        margin-bottom: -125px;
-    }
-}
-/* FIX SCRAPBOOK MOBILE + REVEAL */
-@media (max-width: 650px) {
-
-    .scrapbook-stage.reveal.visible {
-        transform: rotate(2deg) scale(.68);
-        transform-origin: top center;
-    }
-
-}
-
-@media (max-width: 380px) {
-
-    .scrapbook-stage.reveal.visible {
-        transform: rotate(2deg) scale(.60);
-        transform-origin: top center;
-    }
-
 }
