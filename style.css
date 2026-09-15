@@ -4,7 +4,7 @@
     --paper: #fbf7ef;
     --brown: #4a3025;
     --dark: #291b16;
-    --coffee: #765542;
+    --coffee: #7655412;
     --light-brown: #b99a7c;
     --pink: #d9aaa1;
     --yellow: #e8cf8e;
@@ -2742,5 +2742,57 @@ video {
 
     .note-card {
         right: 0;
+    }
+}
+/* =========================================
+   MOBILE OVERFLOW FIX
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 650px) {
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .scrapbook-stage {
+        width: 100%;
+        max-width: 430px;
+        height: 430px;
+        margin-left: auto;
+        margin-right: auto;
+
+        transform: scale(.68);
+        transform-origin: top center;
+
+        margin-bottom: -110px;
+    }
+
+    .marquee,
+    .marquee-track {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .marquee-track {
+        width: max-content;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .scrapbook-stage {
+        max-width: 380px;
+        height: 390px;
+        transform: scale(.60);
+        margin-bottom: -125px;
     }
 }
