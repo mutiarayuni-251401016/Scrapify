@@ -546,11 +546,13 @@ body::before {
 }
 
 .marquee {
-    width: max-content;
+    width: 100%;
     display: flex;
     gap: 35px;
     align-items: center;
-    animation: marquee 25s linear infinite;
+    justify-content: center;
+    animation: none !important;
+    transform: none !important;
 }
 
 .marquee span {
@@ -564,12 +566,6 @@ body::before {
     font-family: var(--hand);
     font-size: 1.8rem;
     color: var(--yellow);
-}
-
-@keyframes marquee {
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 /* =========================
