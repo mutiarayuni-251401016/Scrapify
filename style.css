@@ -1777,7 +1777,7 @@ footer {
    consolidated so old rules cannot fight them.
    ========================================= */
 
- (max-width: 1100px) {
+@media (max-width: 1100px) {
     .hero {
         gap: 30px;
         padding-left: 6vw;
@@ -2283,28 +2283,35 @@ footer {
         font-size: .82rem;
     }
 
-      .final-cta {
+    .newsletter {
         padding: 85px 5vw;
     }
     
-    .cta-heart {
+    .newsletter-paper {
+        padding: 65px 20px;
+    }
+    
+    .newsletter-sticker {
         font-size: 2.5rem;
     }
     
-    .final-cta > p {
+    .newsletter-paper > p {
         font-size: 1.2rem;
     }
     
-    .final-cta h2 {
+    .newsletter-paper h2 {
         font-size: clamp(2.5rem, 12vw, 3.8rem);
-        margin: 15px 0 25px;
+        margin: 15px auto 25px;
     }
     
-    .final-cta > a {
+    .newsletter-paper .primary-button {
         font-size: .65rem;
         padding: 13px 18px;
     }
-    /* ---------- FOOTER ---------- */
+    
+    .newsletter-paper small {
+        font-size: .72rem;
+    }
 
     footer {
         padding: 65px 5vw 25px;
