@@ -878,31 +878,49 @@ body::before {
     opacity: .65;
 }
 
-.final-cta {
+.newsletter {
     padding: 120px 7vw;
     background: var(--cream);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.cta-heart {
+.newsletter-paper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 90px 40px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(55, 35, 25, .08);
+    overflow: hidden;
+}
+
+.newsletter-paper::before,
+.newsletter-paper::after {
+    display: none !important;
+    content: none !important;
+}
+
+.newsletter-sticker {
+    display: block;
+    margin-bottom: 15px;
     font-family: var(--hand);
     font-size: 3rem;
+    line-height: 1;
     color: var(--pink);
-    margin-bottom: 15px;
 }
 
-.final-cta > p {
+.newsletter-paper > p {
+    margin: 0;
     font-family: var(--hand);
     font-size: 1.4rem;
+    line-height: 1.2;
     opacity: .7;
 }
 
-.final-cta h2 {
+.newsletter-paper h2 {
     max-width: 850px;
-    margin: 18px 0 30px;
+    margin: 18px auto 30px;
     font-family: var(--serif);
     font-size: clamp(3rem, 6vw, 6rem);
     font-weight: 500;
@@ -910,31 +928,19 @@ body::before {
     letter-spacing: -.05em;
 }
 
-.final-cta h2 i {
+.newsletter-paper h2 i {
     font-family: var(--hand);
     color: var(--coffee);
 }
 
-.final-cta > a {
+.newsletter-paper .primary-button {
     display: inline-flex;
-    padding: 14px 22px;
-    background: var(--brown);
-    color: var(--cream);
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: .7rem;
-    letter-spacing: .1em;
-    transition: var(--transition);
 }
 
-.final-cta > a:hover {
-    transform: translateY(-3px);
-    box-shadow: 5px 6px 0 var(--pink);
-}
-
-.final-cta > span:last-child {
+.newsletter-paper small {
+    display: block;
     max-width: 400px;
-    margin-top: 18px;
+    margin: 18px auto 0;
     font-size: .8rem;
     line-height: 1.6;
     opacity: .55;
