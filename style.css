@@ -2614,3 +2614,28 @@ footer {
         padding-right: 15px;
     }
 }
+
+/* =========================
+   STOP MARQUEE ANIMATION
+========================= */
+
+.marquee-section,
+.marquee,
+.marquee span,
+.marquee b {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.marquee-section {
+    overflow: hidden;
+}
+
+.marquee {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 35px !important;
+}
