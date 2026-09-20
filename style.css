@@ -1,5 +1,4 @@
 :root {
-
     --cream: #f5efe5;
     --paper: #fbf7ef;
     --brown: #4a3025;
@@ -8,7 +7,6 @@
     --light-brown: #b99a7c;
     --pink: #d9aaa1;
     --yellow: #e8cf8e;
-
     --border: rgba(74, 48, 37, 0.22);
 
     --serif: "Playfair Display", serif;
@@ -31,14 +29,13 @@ html {
 body {
     background: var(--cream);
     color: var(--brown);
-
     font-family: var(--sans);
-
     overflow-x: hidden;
 }
 
 button,
-input {
+input,
+textarea {
     font: inherit;
 }
 
@@ -51,50 +48,39 @@ a {
     text-decoration: none;
 }
 
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    z-index: 999;
-
-    opacity: 0.05;
-
-    background-image:
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
-
+img {
+    max-width: 100%;
 }
 
-.loader {
-
+body::before {
+    content: "";
     position: fixed;
-
     inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.05;
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
 
+/* =========================
+   LOADER
+========================= */
+
+.loader {
+    position: fixed;
+    inset: 0;
     background: var(--brown);
-
     color: var(--cream);
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     z-index: 5000;
-
-    transition: opacity 0.8s ease,
-                visibility 0.8s ease;
+    transition: opacity .8s ease, visibility .8s ease;
 }
 
 .loader.hide {
-
     opacity: 0;
-
     visibility: hidden;
 }
 
@@ -103,11 +89,8 @@ body::before {
 }
 
 .loader-logo {
-
     font-family: var(--hand);
-
     font-size: 4rem;
-
     font-weight: 600;
 }
 
@@ -116,45 +99,36 @@ body::before {
 }
 
 .loader-line {
-
     width: 180px;
-
     height: 2px;
-
     background: rgba(255,255,255,.2);
-
     margin: 20px auto;
-
     overflow: hidden;
 }
 
 .loader-line span {
-
     display: block;
-
     width: 100%;
     height: 100%;
-
     background: var(--cream);
-
     transform: translateX(-100%);
-
     animation: loader 1.5s ease forwards;
 }
 
 .loader-content p {
-
     font-family: var(--hand);
-
     font-size: 1.3rem;
 }
 
 @keyframes loader {
-
     to {
         transform: translateX(0);
     }
 }
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
     position: fixed;
@@ -190,6 +164,7 @@ body::before {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 35px;
 }
 
@@ -256,18 +231,24 @@ body::before {
     color: var(--brown);
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero {
+    width: 100%;
     min-height: 100vh;
     padding: 150px 7vw 100px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     position: relative;
     overflow: hidden;
 }
 
 .hero-content {
+    width: 100%;
     position: relative;
     z-index: 3;
 }
@@ -339,9 +320,15 @@ body::before {
     border-bottom: 1px solid var(--brown);
 }
 
+/* =========================
+   SCRAPBOOK HERO ART
+========================= */
+
 .scrapbook-stage {
+    width: min(100%, 560px);
     height: 600px;
     position: relative;
+    margin: 0 auto;
     transform: rotate(2deg);
 }
 
@@ -530,6 +517,7 @@ body::before {
     0%,100% {
         transform: translateY(0) rotate(-5deg);
     }
+
     50% {
         transform: translateY(-12px) rotate(-3deg);
     }
@@ -539,10 +527,15 @@ body::before {
     0%,100% {
         transform: translateY(0) rotate(9deg);
     }
+
     50% {
         transform: translateY(-15px) rotate(12deg);
     }
 }
+
+/* =========================
+   MARQUEE
+========================= */
 
 .marquee-section {
     background: var(--brown);
@@ -579,8 +572,27 @@ body::before {
     }
 }
 
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
 .section {
+    width: 100%;
     padding: 130px 7vw;
+}
+
+.section > *,
+.section > .intro,
+.section > .shop-header,
+.section > .instagram-header,
+.section > .collection-header,
+.section > .faq-list,
+.section > .package-list,
+.section > .collection-grid,
+.section > .insta-grid {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-label {
@@ -592,7 +604,7 @@ body::before {
 
 .intro {
     display: grid;
-    grid-template-columns: 1.2fr .8fr;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
     gap: 100px;
     align-items: end;
 }
@@ -635,10 +647,17 @@ body::before {
     padding-bottom: 5px;
 }
 
+/* =========================
+   FEATURES
+========================= */
+
 .features {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
     padding: 0 7vw 130px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -663,6 +682,7 @@ body::before {
     font-family: var(--serif);
     font-size: 1.6rem;
     font-weight: 500;
+    line-height: 1.15;
 }
 
 .feature-card p {
@@ -672,6 +692,10 @@ body::before {
     margin-top: 10px;
     max-width: 280px;
 }
+
+/* =========================
+   SHOP
+========================= */
 
 .shop {
     background: #e9ddce;
@@ -685,7 +709,8 @@ body::before {
 }
 
 .shop-description {
-    max-width: 300px;
+    width: 300px;
+    max-width: 100%;
     font-size: .85rem;
     line-height: 1.7;
     opacity: .65;
@@ -715,6 +740,94 @@ body::before {
     color: var(--cream);
 }
 
+/* =========================
+   PACKAGE LIST
+========================= */
+
+.package-list {
+    width: 100%;
+    border-top: 1px solid var(--border);
+}
+
+.package-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 28px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.package-main {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.package-main > span {
+    width: 28px;
+    flex: 0 0 28px;
+    font-family: var(--hand);
+    font-size: 1.15rem;
+    opacity: .45;
+}
+
+.package-main > div {
+    min-width: 0;
+}
+
+.package-main h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.package-main p {
+    margin-top: 3px;
+    font-family: var(--hand);
+    font-size: 1rem;
+    opacity: .62;
+}
+
+.package-row > strong {
+    min-width: 88px;
+    text-align: right;
+    white-space: nowrap;
+    font-size: .9rem;
+}
+
+.package-row .add-cart {
+    width: auto;
+    min-width: 120px;
+    padding: 11px 15px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.add-cart {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--brown);
+    text-transform: uppercase;
+    font-size: .65rem;
+    letter-spacing: .1em;
+    transition: var(--transition);
+}
+
+.add-cart:hover {
+    background: var(--brown);
+    color: var(--cream);
+}
+
+/* =========================
+   QUOTE
+========================= */
 
 .quote-section {
     min-height: 70vh;
@@ -769,6 +882,201 @@ body::before {
     opacity: .6;
 }
 
+/* =========================
+   COLLECTION
+========================= */
+
+.collection {
+    position: relative;
+    padding-top: 120px;
+    overflow: hidden;
+}
+
+.collection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+    margin-bottom: 55px;
+}
+
+.collection-header > div {
+    min-width: 0;
+}
+
+.collection-description {
+    width: 300px;
+    max-width: 100%;
+    font-size: .9rem;
+    line-height: 1.7;
+    opacity: .65;
+}
+
+.collection-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 36px;
+    align-items: start;
+}
+
+.collection-card {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.collection-paper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(55,35,25,.10);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.collection-card:nth-child(1) .collection-paper {
+    transform: rotate(-1deg);
+}
+
+.collection-card:nth-child(2) .collection-paper {
+    transform: rotate(.8deg);
+}
+
+.collection-card:nth-child(3) .collection-paper {
+    transform: rotate(-.7deg);
+}
+
+.collection-card:hover .collection-paper {
+    transform: translateY(-7px) rotate(0);
+    box-shadow: 0 18px 32px rgba(55,35,25,.14);
+}
+
+.collection-sweet {
+    background: #ead8c3;
+}
+
+.collection-friend {
+    background: #ead0d0;
+}
+
+.collection-little {
+    background: #e5dfc5;
+}
+
+.collection-paper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(
+            rgba(74,48,37,.055) .7px,
+            transparent .7px
+        );
+    background-size: 9px 9px;
+    pointer-events: none;
+}
+
+.collection-paper .paper-label {
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+    padding: 6px 12px;
+    background: rgba(255,250,240,.78);
+    font-family: var(--hand);
+    font-size: .95rem;
+    transform: rotate(-2deg);
+}
+
+.collection-paper .single-photo {
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    aspect-ratio: 4 / 5;
+    margin: 25px auto 0;
+    border: 9px solid #faf6ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--hand);
+    font-size: .95rem;
+    color: rgba(74,48,37,.45);
+    box-shadow: 0 8px 17px rgba(55,35,25,.12);
+}
+
+.collection-paper .single-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.collection-paper .photo-sweet {
+    background: #dcb9aa;
+    transform: rotate(-2deg);
+}
+
+.collection-paper .photo-friend {
+    background: #d7c0bf;
+    transform: rotate(2deg);
+}
+
+.collection-paper .photo-little {
+    background: #cbc89f;
+    transform: rotate(-1deg);
+}
+
+.collection-paper .collection-title {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    font-family: var(--hand);
+    font-size: clamp(2.2rem, 3.2vw, 3.4rem);
+    line-height: .85;
+    font-weight: 500;
+}
+
+.collection-paper .deco {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,250,240,.82);
+    font-family: var(--hand);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(55,35,25,.07);
+}
+
+.collection-paper .deco-heart {
+    top: 43%;
+    right: 8%;
+}
+
+.collection-paper .deco-star {
+    top: 47%;
+    left: 8%;
+    background: transparent;
+    box-shadow: none;
+}
+
+.collection-paper .deco-flower {
+    top: 43%;
+    right: 8%;
+}
+
+/* =========================
+   INSTAGRAM
+========================= */
+
 .instagram-header {
     display: flex;
     justify-content: space-between;
@@ -786,7 +1094,7 @@ body::before {
 
 .insta-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 15px;
 }
 
@@ -826,9 +1134,13 @@ body::before {
     margin-bottom: 10px;
 }
 
+/* =========================
+   FAQ
+========================= */
+
 .faq {
     display: grid;
-    grid-template-columns: .8fr 1.2fr;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
     gap: 100px;
     background: #eadfd1;
 }
@@ -878,20 +1190,26 @@ body::before {
     opacity: .65;
 }
 
+/* =========================
+   NEWSLETTER / CTA
+========================= */
+
 .newsletter {
+    width: 100%;
     padding: 120px 7vw;
     background: var(--cream);
 }
 
 .newsletter-paper {
     position: relative;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 90px 40px;
     background: var(--paper);
     border: 1px solid var(--border);
     text-align: center;
-    box-shadow: 0 15px 35px rgba(55, 35, 25, .08);
+    box-shadow: 0 15px 35px rgba(55,35,25,.08);
     overflow: hidden;
 }
 
@@ -919,6 +1237,7 @@ body::before {
 }
 
 .newsletter-paper h2 {
+    width: 100%;
     max-width: 850px;
     margin: 18px auto 30px;
     font-family: var(--serif);
@@ -939,6 +1258,7 @@ body::before {
 
 .newsletter-paper small {
     display: block;
+    width: 100%;
     max-width: 400px;
     margin: 18px auto 0;
     font-size: .8rem;
@@ -946,13 +1266,21 @@ body::before {
     opacity: .55;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer {
+    width: 100%;
     background: #302019;
     color: var(--cream);
     padding: 80px 7vw 30px;
 }
 
 .footer-top {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -1008,6 +1336,9 @@ footer {
 }
 
 .footer-bottom {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
     border-top: 1px solid rgba(255,255,255,.12);
     padding-top: 20px;
     display: flex;
@@ -1017,6 +1348,10 @@ footer {
     letter-spacing: .1em;
     opacity: .5;
 }
+
+/* =========================
+   MODAL
+========================= */
 
 .modal {
     position: fixed;
@@ -1120,6 +1455,10 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 25px;
 }
+
+/* =========================
+   CART
+========================= */
 
 .cart-drawer {
     position: fixed;
@@ -1242,6 +1581,9 @@ footer {
     font-size: .6rem;
 }
 
+/* =========================
+   CHECKOUT
+========================= */
 
 .checkout-modal {
     position: fixed;
@@ -1437,283 +1779,9 @@ footer {
     opacity: .5;
 }
 
-
-.collection {
-    position: relative;
-    padding-top: 120px;
-    overflow: hidden;
-}
-
-.collection-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 60px;
-    margin-bottom: 55px;
-}
-
-.collection-header > div {
-    min-width: 0;
-}
-
-.collection-description {
-    width: 300px;
-    max-width: 100%;
-    font-size: .9rem;
-    line-height: 1.7;
-    opacity: .65;
-}
-
-.collection-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 36px;
-    align-items: start;
-}
-
-.collection-card {
-    position: relative;
-    width: 100%;
-    min-width: 0;
-}
-
-.collection-paper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-
-    padding: 26px;
-
-    display: flex;
-    flex-direction: column;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 12px 28px rgba(55, 35, 25, .10);
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-}
-
-.collection-card:nth-child(1) .collection-paper {
-    transform: rotate(-1deg);
-}
-
-.collection-card:nth-child(2) .collection-paper {
-    transform: rotate(0.8deg);
-}
-
-.collection-card:nth-child(3) .collection-paper {
-    transform: rotate(-0.7deg);
-}
-
-.collection-card:hover .collection-paper {
-    transform: translateY(-7px) rotate(0);
-    box-shadow:
-        0 18px 32px rgba(55, 35, 25, .14);
-}
-
-.collection-sweet {
-    background: #ead8c3;
-}
-
-.collection-friend {
-    background: #ead0d0;
-}
-
-.collection-little {
-    background: #e5dfc5;
-}
-
-.collection-paper::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(
-            rgba(74, 48, 37, .055) .7px,
-            transparent .7px
-        );
-    background-size: 9px 9px;
-    pointer-events: none;
-}
-
-.collection-paper .paper-label {
-    position: relative;
-    z-index: 2;
-    align-self: flex-start;
-    padding: 6px 12px;
-    background: rgba(255, 250, 240, .78);
-    font-family: var(--hand);
-    font-size: .95rem;
-    transform: rotate(-2deg);
-}
-
-.collection-paper .single-photo {
-    position: relative;
-    z-index: 2;
-    width: 70%;
-    aspect-ratio: 4 / 5;
-    margin: 25px auto 0;
-    border: 9px solid #faf6ed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--hand);
-    font-size: .95rem;
-    color: rgba(74, 48, 37, .45);
-    box-shadow:
-        0 8px 17px rgba(55, 35, 25, .12);
-}
-
-.collection-paper .photo-sweet {
-    background: #dcb9aa;
-    transform: rotate(-2deg);
-}
-
-.collection-paper .photo-friend {
-    background: #d7c0bf;
-    transform: rotate(2deg);
-}
-
-.collection-paper .photo-little {
-    background: #cbc89f;
-    transform: rotate(-1deg);
-}
-
-.collection-paper .collection-title {
-    position: relative;
-    z-index: 2;
-    margin-top: auto;
-    font-family: var(--hand);
-    font-size: clamp(2.2rem, 3.2vw, 3.4rem);
-    line-height: .85;
-    font-weight: 500;
-}
-
-.collection-paper .deco {
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: rgba(255, 250, 240, .82);
-    font-family: var(--hand);
-    font-size: 1.2rem;
-    box-shadow:
-        0 4px 10px rgba(55, 35, 25, .07);
-}
-
-.collection-paper .deco-heart {
-    top: 43%;
-    right: 8%;
-}
-.collection-paper .deco-star {
-    top: 47%;
-    left: 8%;
-    background: transparent;
-    box-shadow: none;
-}
-
-.collection-paper .deco-flower {
-    top: 43%;
-    right: 8%;
-}
-
-
-.package-list {
-    width: 100%;
-    border-top: 1px solid var(--border);
-}
-
-.package-row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: center;
-    gap: 28px;
-    padding: 22px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.package-main {
-    min-width: 0;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.package-main > span {
-    width: 28px;
-    flex: 0 0 28px;
-    font-family: var(--hand);
-    font-size: 1.15rem;
-    opacity: .45;
-}
-
-.package-main h3 {
-    margin: 0;
-    font-family: var(--serif);
-    font-size: 1.35rem;
-    font-weight: 500;
-    line-height: 1.1;
-}
-
-.package-main p {
-    margin-top: 3px;
-    font-family: var(--hand);
-    font-size: 1rem;
-    opacity: .62;
-}
-
-.package-row > strong {
-    min-width: 88px;
-    text-align: right;
-    white-space: nowrap;
-    font-size: .9rem;
-}
-
-.package-row .add-cart {
-    width: auto;
-    min-width: 120px;
-    padding: 11px 15px;
-    border-radius: 50px;
-    white-space: nowrap;
-}
-
-.single-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* =========================================
-   SCRAPIFY — CURRENT SITE EXTRAS
-   ========================================= */
-
-.add-cart {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--brown);
-    text-transform: uppercase;
-    font-size: .65rem;
-    letter-spacing: .1em;
-    transition: var(--transition);
-}
-
-.add-cart:hover {
-    background: var(--brown);
-    color: var(--cream);
-}
+/* =========================
+   REVEAL / CURSOR
+========================= */
 
 .reveal {
     opacity: 0;
@@ -1728,16 +1796,6 @@ footer {
     transform: translateY(0);
 }
 
-
-/* Collection photos can contain real images later. */
-.single-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Tiny cursor sparkle — normal cursor stays visible. */
 .cursor-sparkle {
     position: fixed;
     left: 0;
@@ -1757,49 +1815,73 @@ footer {
         opacity: 0;
         transform: translate(-50%, -50%) scale(.45) rotate(-8deg);
     }
+
     25% {
         opacity: .85;
     }
+
     100% {
         opacity: 0;
         transform: translate(-50%, -65%) scale(1) rotate(8deg);
     }
 }
 
-.feature-card h3 {
-    line-height: 1.15;
-}
-
-/* =========================================
-   SCRAPIFY — RESPONSIVE
-   Desktop styles above stay unchanged.
-   Mobile rules below are intentionally
-   consolidated so old rules cannot fight them.
-   ========================================= */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1100px) {
     .hero {
-        gap: 30px;
+        grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+        gap: 20px;
         padding-left: 6vw;
         padding-right: 6vw;
     }
 
+    .scrapbook-stage {
+        width: 540px;
+        max-width: 100%;
+        transform: scale(.92) rotate(2deg);
+        transform-origin: center center;
+    }
+
     .photo-main {
         width: 360px;
+        left: 70px;
     }
 
     .paper-shadow {
         width: 400px;
         left: 50px;
     }
+
+    .section,
+    .newsletter {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .features {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    footer {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
 }
+
+/* =========================
+   TABLET / SMALL LAPTOP
+========================= */
 
 @media (max-width: 900px) {
     .hero {
         min-height: auto;
         grid-template-columns: 1fr;
-        padding: 130px 6vw 55px;
-        gap: 35px;
+        padding: 130px 6vw 70px;
+        gap: 20px;
         align-items: start;
     }
 
@@ -1820,6 +1902,7 @@ footer {
         width: min(100%, 560px);
         height: 560px;
         margin: 0 auto;
+        transform: rotate(2deg);
     }
 
     .intro,
@@ -1846,6 +1929,10 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 650px) {
     html,
@@ -1893,13 +1980,13 @@ footer {
         margin-right: 8px;
     }
 
-    /* ---------- HERO ---------- */
+    /* HERO */
 
     .hero {
-        min-height: 0;
         width: 100%;
-        padding: 105px 5vw 25px;
-        gap: 28px;
+        min-height: 0;
+        padding: 105px 5vw 45px;
+        gap: 20px;
         overflow: hidden;
     }
 
@@ -1923,7 +2010,7 @@ footer {
 
     .hero-description {
         max-width: 330px;
-        margin-top: 22px;
+        margin: 22px auto 0;
         font-size: .88rem;
         line-height: 1.7;
     }
@@ -1932,6 +2019,7 @@ footer {
         width: 100%;
         gap: 10px;
         margin-top: 25px;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
@@ -1948,15 +2036,11 @@ footer {
         padding: 13px 15px;
     }
 
-    /*
-       IMPORTANT:
-       The scrapbook is resized by changing its actual children,
-       not by scaling the whole stage. This avoids the reveal/transform
-       conflict and keeps the composition centered on phones.
-    */
+    /* SCRAPBOOK */
 
     .scrapbook-stage {
-        width: min(100%, 380px);
+        width: 380px;
+        max-width: 100%;
         height: 455px;
         margin: 0 auto;
         transform: rotate(2deg);
@@ -2083,7 +2167,7 @@ footer {
         bottom: 7%;
     }
 
-    /* ---------- MARQUEE ---------- */
+    /* MARQUEE */
 
     .marquee-section {
         padding: 14px 0;
@@ -2106,10 +2190,22 @@ footer {
         font-size: 1.45rem;
     }
 
-    /* ---------- GENERAL SECTIONS ---------- */
+    /* SECTIONS */
 
     .section {
         padding: 85px 5vw;
+    }
+
+    .section > *,
+    .section > .intro,
+    .section > .shop-header,
+    .section > .instagram-header,
+    .section > .collection-header,
+    .section > .faq-list,
+    .section > .package-list,
+    .section > .collection-grid,
+    .section > .insta-grid {
+        max-width: 100%;
     }
 
     .section-label {
@@ -2134,6 +2230,7 @@ footer {
     }
 
     .features {
+        width: 100%;
         padding: 0 5vw 85px;
         gap: 30px;
     }
@@ -2142,7 +2239,7 @@ footer {
         margin: 25px 0 8px;
     }
 
-    /* ---------- SHOP / PACKAGES ---------- */
+    /* SHOP */
 
     .shop-header,
     .instagram-header,
@@ -2206,7 +2303,7 @@ footer {
         font-size: .63rem;
     }
 
-    /* ---------- COLLECTION ---------- */
+    /* COLLECTION */
 
     .collection {
         padding-top: 75px;
@@ -2245,7 +2342,7 @@ footer {
         height: 30px;
     }
 
-    /* ---------- QUOTE / INSTAGRAM / FAQ ---------- */
+    /* QUOTE */
 
     .quote-section {
         min-height: 55vh;
@@ -2264,14 +2361,18 @@ footer {
         font-size: clamp(2.5rem, 12vw, 4rem);
     }
 
+    /* INSTAGRAM */
+
     .insta-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
     }
 
     .insta-item div {
         font-size: 3rem;
     }
+
+    /* FAQ */
 
     .faq-question {
         font-size: 1.05rem;
@@ -2283,41 +2384,50 @@ footer {
         font-size: .82rem;
     }
 
+    /* NEWSLETTER */
+
     .newsletter {
-        padding: 85px 5vw;
+        width: 100%;
+        padding: 70px 5vw;
     }
-    
+
     .newsletter-paper {
+        width: 100%;
+        max-width: 100%;
         padding: 65px 20px;
     }
-    
+
     .newsletter-sticker {
         font-size: 2.5rem;
     }
-    
+
     .newsletter-paper > p {
         font-size: 1.2rem;
     }
-    
+
     .newsletter-paper h2 {
+        width: 100%;
         font-size: clamp(2.5rem, 12vw, 3.8rem);
         margin: 15px auto 25px;
     }
-    
+
     .newsletter-paper .primary-button {
         font-size: .65rem;
         padding: 13px 18px;
     }
-    
+
     .newsletter-paper small {
         font-size: .72rem;
     }
+
+    /* FOOTER */
 
     footer {
         padding: 65px 5vw 25px;
     }
 
     .footer-top {
+        width: 100%;
         gap: 45px;
         padding-bottom: 55px;
     }
@@ -2333,11 +2443,12 @@ footer {
     }
 
     .footer-bottom {
+        width: 100%;
         flex-direction: column;
         gap: 10px;
     }
 
-    /* ---------- MODALS / CART ---------- */
+    /* MODALS */
 
     .modal-content {
         width: 94%;
@@ -2387,6 +2498,10 @@ footer {
     }
 }
 
+/* =========================
+   VERY SMALL PHONE
+========================= */
+
 @media (max-width: 380px) {
     .navbar {
         padding-left: 4vw;
@@ -2403,12 +2518,18 @@ footer {
         padding-right: 4vw;
     }
 
+    .newsletter {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
     .hero h1 {
         font-size: 2.85rem;
     }
 
     .scrapbook-stage {
-        width: min(100%, 350px);
+        width: 350px;
+        max-width: 100%;
         height: 425px;
     }
 
@@ -2475,5 +2596,10 @@ footer {
     .package-row .add-cart {
         padding: 6px 9px;
         font-size: .59rem;
+    }
+
+    .newsletter-paper {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
